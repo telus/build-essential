@@ -24,7 +24,9 @@ commands:
 
       - run:
           name: Install Build Essential
-          command: npx install-peerdeps --only-peers --global @telus/build-essential
+          command: |
+            npm config set unsafe-perm true
+            npx install-peerdeps --only-peers --global @telus/build-essential
 
       - save_cache:
           key: build-essential-{{ checksum "/.build-essential-version" }}
