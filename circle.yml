@@ -16,18 +16,18 @@ commands:
 
       - run:
           name: Prepare Build Cache
-          command: npm info @telus/build-essential version > ~/.build-essential-version
+          command: npm info @telus/build-essential version > /.build-essential-version
 
       - restore_cache:
           keys:
-            - build-essential-{{ checksum ".build-essential-version" }}
+            - build-essential-{{ checksum "/.build-essential-version" }}
 
       - run:
           name: Install Build Essential
           command: npx install-peerdeps --only-peers --global @telus/build-essential
 
       - save_cache:
-          key: build-essential-{{ checksum ".build-essential-version" }}
+          key: build-essential-{{ checksum "/.build-essential-version" }}
           paths:
             - node_modules
 
