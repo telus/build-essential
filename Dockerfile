@@ -7,9 +7,9 @@ RUN apk add --update --no-cache ca-certificates git openssh
 
 USER node
 
-ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
-ENV PATH=$NPM_CONFIG_PREFIX:$PATH
-ENV NODE_PATH=$NPM_CONFIG_PREFIX:$NODE_PATH
+ENV NPM_CONFIG_PREFIX=~/.npm-global
+ENV PATH=$NPM_CONFIG_PREFIX/bin:$PATH
+ENV NODE_PATH=$NPM_CONFIG_PREFIX/lib/node_modules:$NODE_PATH
 
 RUN mkdir ~/.ssh
 RUN ssh-keyscan github.com >> ~/.ssh/known_hosts
