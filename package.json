@@ -24,6 +24,7 @@
     "postinstall": "npx install-peerdeps --only-peers --global @telus/build-essential",
     "lint:deps": "npx david --error404 --errorSCM --errorDepType",
     "lint:ec": "npx editorconfig-checker .",
+    "lint:md": "npx remark-cli --quiet --frail .",
     "lint": "npx npm-run-all -p lint:*"
   },
   "peerDependencies": {
