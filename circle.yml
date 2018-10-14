@@ -5,34 +5,9 @@ executors:
     working_directory: /src
 
     docker:
-      - image: node:alpine
+      - image: telusops/build-essential:latest
 
 commands:
-  setup:
-    steps:
-      - run:
-          name: Setup Container
-          command: apk add --update --no-cache ca-certificates git openssh
-
-      - run:
-          name: Prepare Build Cache
-          command: npm info @telus/build-essential version > /tmp/build-essential-version
-
-      - restore_cache:
-          keys:
-            - v2-build-essential-{{ checksum "/tmp/build-essential-version" }}
-
-      - run:
-          name: Install Build Essential
-          command: |
-            npm config set unsafe-perm true
-            npx install-peerdeps --only-peers --global @telus/build-essential
-
-      - save_cache:
-          key: v2-build-essential-{{ checksum "/tmp/build-essential-version" }}
-          paths:
-            - /usr/local/lib/node_modules
-
   persist:
     steps:
       - persist_to_workspace: { root: /src, paths: . }
@@ -45,21 +20,18 @@ jobs:
   build:
     executor: app
     steps:
-      - setup
       - checkout
       - persist
 
   lint:
     executor: app
     steps:
-      - setup
       - attach
       - run: npm run lint
 
   release:
     executor: app
     steps:
-      - setup
       - attach
       - run: npx semantic-release
 
