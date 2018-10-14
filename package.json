@@ -1,5 +1,5 @@
 {
-  "version": "1.5.1",
+  "version": "1.5.2",
   "name": "@telus/build-essential",
   "description": "contains a list of packages which are considered essential for building packages in ci platform",
   "homepage": "https://github.com/telus/build-essential",
