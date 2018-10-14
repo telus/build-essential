@@ -25,6 +25,7 @@
     "lint:deps": "npx david --error404 --errorSCM --errorDepType",
     "lint:ec": "npx editorconfig-checker .",
     "lint:md": "npx remark-cli --quiet --frail .",
+    "lint:vuln": "npx isnodesafe --ci",
     "lint": "npx npm-run-all -p lint:*"
   },
   "peerDependencies": {
@@ -35,6 +36,7 @@
     "editorconfig-checker": "^1.3.3",
     "eslint": "^5.7.0",
     "install-peerdeps": "^1.9.0",
+    "node-release-lines": "^1.3.1",
     "npm-run-all": "^4.1.3",
     "remark-cli": "^5.0.0",
     "semantic-release": "^15.9.17"
