@@ -8,7 +8,6 @@
     "url": "https://github.com/telus/build-essential.git"
   },
   "license": "MIT",
-  "main": "index.js",
   "keywords": [
     "telus",
     "build",
@@ -24,9 +23,9 @@
     "postinstall": "npx install-peerdeps --only-peers --global @telus/build-essential",
     "lint:deps": "npx david --error404 --errorSCM --errorDepType",
     "lint:ec": "npx editorconfig-checker .",
-    "lint:md": "npx remark-cli --quiet --frail .",
-    "lint:vuln": "npx isnodesafe --ci",
-    "lint": "npx npm-run-all -p lint:*"
+    "lint:node": "npx isnodesafe --ci",
+    "lint:md": "npx remark --quiet --frail .",
+    "lint": "npx run-p lint:*"
   },
   "peerDependencies": {
     "@telus/eslint-config": "^1.3.2",
