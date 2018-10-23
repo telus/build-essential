@@ -12,8 +12,4 @@ ENV PATH=$PATH:$NPM_CONFIG_PREFIX/bin
 ENV MANPATH=$MANPATH:$NPM_CONFIG_PREFIX/share/man
 ENV NODE_PATH=$NPM_CONFIG_PREFIX/lib/node_modules
 
-RUN mkdir ~/.ssh
-RUN ssh-keyscan github.com > ~/.ssh/known_hosts
-
-RUN npm install -g install-peerdeps
 RUN npx install-peerdeps --only-peers --global @telus/build-essential
