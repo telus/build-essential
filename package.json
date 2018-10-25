@@ -21,10 +21,11 @@
   },
   "scripts": {
     "postinstall": "npx install-peerdeps --only-peers --global @telus/build-essential",
+    "lint:audit": "npm audit",
     "lint:deps": "npx david --error404 --errorSCM --errorDepType",
     "lint:ec": "npx editorconfig-checker .",
-    "lint:node": "npx -p node-release-lines isnodesafe --ci",
     "lint:md": "npx -p remark-cli remark --quiet --frail .",
+    "lint:node": "npx -p node-release-lines isnodesafe --ci",
     "lint": "npx -p npm-run-all run-p lint:*"
   },
   "peerDependencies": {
