@@ -23,6 +23,12 @@ jobs:
       - checkout
       - persist
 
+  audit:
+    executor: app
+    steps:
+      - attach
+      - run: npm audit
+
   lint:
     executor: app
     steps:
@@ -45,9 +51,12 @@ workflows:
       - lint:
           requires: [ build ]
 
+      - audit:
+          requires: [ build ]
+
       - release:
           context: npm-library
-          requires: [ build, lint ]
+          requires: [ build, audit, lint ]
           filters:
             branches:
               only: master
