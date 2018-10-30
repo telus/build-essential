@@ -20,5 +20,5 @@ npm install --global @telus/build-essential
 [npm-url]: https://www.npmjs.com/package/@telus/build-essential
 [npm-image]: https://img.shields.io/npm/v/@telus/build-essential.svg?style=for-the-badge&logo=npm
 
-[docker-url]: https://hub.docker.com/r/telusops/build-essential/
-[docker-image]: https://img.shields.io/docker/build/telusops/build-essential.svg?label=docker&style=for-the-badge&logo=docker
+[docker-url]: https://hub.docker.com/r/telus/build-essential/
+[docker-image]: https://img.shields.io/docker/build/telus/build-essential.svg?label=docker&style=for-the-badge&logo=docker
