@@ -53,7 +53,7 @@ For developers working across multipl projects, having to install the same depen
 npm install --global @telus/build-essential
 ```
 
-> _**Note**: the [`postinstall`] step will attempt to install more packages **globally**, you might need to run with `sudo` depending on your local `npm` setup_
+> _**Note**: the [`postinstall`][6] step will attempt to install more packages **globally**, you might need to run with `sudo` depending on your local `npm` setup_
 
 
 ### Use in your CI
@@ -89,3 +89,4 @@ Use the [Docker Container][3] to run your [lint steps][5] as per the example pro
 [3]: https://github.com/telus/build-essential/blob/master/circle.yml#L7-L8
 [4]: https://github.com/telus/build-essential/blob/master/circle.yml#L32-L36
 [5]: https://github.com/telus/build-essential/blob/master/package.json#L24-L29
+[6]: https://github.com/telus/build-essential/blob/master/package.json#L23
