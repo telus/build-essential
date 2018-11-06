@@ -52,7 +52,7 @@ For developers working across multipl projects, having to install the same depen
 npm install --global @telus/build-essential
 ```
 
-> _**Note**: the [`postinstall`][6] step will attempt to install more packages **globally**, you might need to run with `sudo` depending on your local `npm` setup_
+> _**Note**: the [`postinstall`][6] step will attempt to install more packages **globally**, a [good way][7] to make this work if you are having permission issues is to set your NPM prefix to somewhere in your homedir (e.g. `~/.npm`) in your config (`~/.npmrc` with `prefix=<dir>`) and to add the `bin/` directory to your `PATH` environment variable. For an example, consider line 15 of the [`Dockerfile`][2]. If you really know what you're doing, but it's not recommended, you could run with `sudo` depending on your local `npm` setup_
 
 ### Use in your CI
 
@@ -88,3 +88,4 @@ Use the [Docker Container][3] to run your [lint steps][5] as per the example pro
 [4]: https://github.com/telus/build-essential/blob/master/circle.yml#L32-L36
 [5]: https://github.com/telus/build-essential/blob/master/package.json#L24-L29
 [6]: https://github.com/telus/build-essential/blob/master/package.json#L23
+[7]: https://medium.com/@ExplosionPills/dont-use-sudo-with-npm-still-66e609f5f92
