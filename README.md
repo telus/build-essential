@@ -41,7 +41,7 @@ For developers working across multipl projects, having to install the same depen
   - `updated` - [Updated][] ensures you have the latest dependencies 
 
 - Utilities:
-  - [`install-peerdeps`](https://www.npmjs.com/package/install-peerdeps)
+  - [`install-group`](https://www.npmjs.com/package/install-group)
   - [`npm-run-all`](https://www.npmjs.com/package/npm-run-all)
 
 ## How
