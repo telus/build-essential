@@ -12,4 +12,4 @@ ENV PATH=$PATH:$NPM_CONFIG_PREFIX/bin
 ENV MANPATH=$MANPATH:$NPM_CONFIG_PREFIX/share/man
 ENV NODE_PATH=$NPM_CONFIG_PREFIX/lib/node_modules
 
-RUN npx install-peerdeps --only-peers --global @telus/build-essential
+RUN npx install-group peer --package @telus/build-essential --global
