@@ -1,0 +1,15 @@
+FROM node:8-alpine
+LABEL name="build-essential-8"
+LABEL description="Node Build Essential Docker Image (Node v8)"
+LABEL maintainer="Ahmad Nassri <ahmad.nassri@telus.com>"
+
+RUN apk add --update --no-cache ca-certificates git openssh
+
+USER node
+
+ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
+ENV PATH=$PATH:$NPM_CONFIG_PREFIX/bin
+ENV MANPATH=$MANPATH:$NPM_CONFIG_PREFIX/share/man
+ENV NODE_PATH=$NPM_CONFIG_PREFIX/lib/node_modules
+
+RUN npx install-peerdeps --only-peers --global @telus/build-essential
