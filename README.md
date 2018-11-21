@@ -23,7 +23,7 @@ For developers working across multipl projects, having to install the same depen
 ## What
 
 - [npm package][]: released as an open source package under `@telus` scope in npm, the [`package.json`][1] file contains a number of pre-selected common dependencies, _(mainly used for linting)_
-  > _**Note**: the dependencies are marked as `peerDependencies` to enable some limitations around `eslint` and others in global usage._
+  > _**Note**: the dependencies are marked as `peerDependencies` to enable some limitations around `eslint` and others in global usage. For example, when `eslint` is installed globally it looks for packages in the global scope, not the local one._
 
 - [Docker Container][]: a [`Dockerfile`][2] uses the package above as basis for creating a container used in CI jobs
 
@@ -36,6 +36,7 @@ For developers working across multipl projects, having to install the same depen
 - Tools:
   - `editorconfig-checker` - [EditorConfig][] validator 
   - `eslint` - [ESLint][] Validator
+  - `babel-eslint` - [Babel-ESLint][] for if you are using types (Flow) or experimental features not supported in ESLint itself yet
   - `remark-cli` - [Remark][] is a markdown validator
   - `semantic-release` [Semantic Release][] is a fully automated version management and package publishing tool
   - `updated` - [Updated][] ensures you have the latest dependencies 
@@ -75,6 +76,7 @@ Use the [Docker Container][3] to run your [lint steps][5] as per the example pro
 [docker container]: https://hub.docker.com/r/telus/build-essential/
 [editorconfig]: https://editorconfig.org/
 [eslint]: https://eslint.org/
+[babel-eslint]: https://github.com/babel/babel-eslint
 [global dependencies]: https://docs.npmjs.com/getting-started/installing-npm-packages-globally
 [npm package]: https://www.npmjs.com/@telus/build-essential
 [reference architecture]: https://github.com/telus/reference-architecture
