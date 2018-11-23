@@ -29,7 +29,7 @@
   },
   "peerDependencies": {
     "@telus/eslint-config": "^1.3.5",
-    "@telus/remark-preset-lint-markdown": "^1.1.0",
+    "@telus/remark-config": "^1.1.0",
     "@telus/semantic-release-config": "^1.0.4",
     "editorconfig-checker": "^1.3.3",
     "eslint": "^5.9.0",
