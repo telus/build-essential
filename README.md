@@ -31,7 +31,7 @@ For developers working across multipl projects, having to install the same depen
 
 - Configration:
   - `@telus/eslint-config` - Shared [ESLint][] Config
-  - `@telus/remark-preset-lint-markdown` - Shared [Remark][] Config
+  - `@telus/remark-config` - Shared [Remark][] Config
   - `@telus/semantic-release-config` - Shared [Semantic Release][] Config
 - Tools:
   - `editorconfig-checker` - [EditorConfig][] validator 
