@@ -2,19 +2,20 @@ version: 2.1
 
 executors:
   app:
-    working_directory: ~/src
-
     docker:
       - image: telus/build-essential
 
 commands:
   persist:
     steps:
-      - persist_to_workspace: { root: ~/src, paths: . }
+      - persist_to_workspace:
+          root: .
+          paths: .
 
   attach:
     steps:
-      - attach_workspace: { at: "." }
+      - attach_workspace:
+          at: .
 
 jobs:
   build:
@@ -22,12 +23,6 @@ jobs:
     steps:
       - checkout
       - persist
-
-  audit:
-    executor: app
-    steps:
-      - attach
-      - run: npm audit
 
   lint:
     executor: app
@@ -51,12 +46,9 @@ workflows:
       - lint:
           requires: [ build ]
 
-      - audit:
-          requires: [ build ]
-
       - release:
           context: npm-library
-          requires: [ build, audit, lint ]
+          requires: [ build, lint ]
           filters:
             branches:
               only: master

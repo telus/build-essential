@@ -3,7 +3,8 @@ LABEL name="build-essential"
 LABEL description="Node Build Essential Docker Image"
 LABEL maintainer="Ahmad Nassri <ahmad.nassri@telus.com>"
 
-RUN apk add --update --no-cache ca-certificates git openssh
+RUN apk add --update --no-cache ca-certificates git openssh py-pip
+run pip install yamllint
 
 USER node
 
