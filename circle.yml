@@ -22,6 +22,7 @@ jobs:
     executor: app
     steps:
       - checkout
+      - run: "npm install"
       - persist
 
   lint:
