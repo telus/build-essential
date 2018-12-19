@@ -25,7 +25,7 @@
     "lint:deps": "npx updated",
     "lint:ec": "npx editorconfig-checker .",
     "lint:md": "npx remark --quiet --frail .",
-    "lint": "npx npm-run-all -p -c -l lint:*",
+    "lint": "npx npm-run-all -p -c -n lint:*",
     "fix:md": "npm run lint:md -- -o",
     "fix:deps": "npm run lint:deps -- --update",
     "setup-local": "npx install-group peer --package @telus/build-essential --no-save"
@@ -35,12 +35,12 @@
     "@telus/remark-config": "^1.1.0",
     "@telus/semantic-release-config": "^1.1.2",
     "editorconfig-checker": "^1.3.3",
-    "eslint": "^5.10.0",
+    "eslint": "^5.9.0",
     "babel-eslint": "10.0.1",
     "install-group": "^3.0.0",
     "npm-run-all": "^4.1.5",
     "remark-cli": "^6.0.1",
-    "semantic-release": "^15.13.1",
+    "semantic-release": "^15.12.3",
     "updated": "^1.3.0"
   }
 }
