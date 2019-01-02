@@ -57,7 +57,7 @@ npm install --global @telus/build-essential
 
 ### Use in your CI
 
-Use the [Docker Container][3] to run your [lint steps][5] as per the example provided in this project's [cirlce.yml][4]
+Use the [Docker Container][3] to run your [lint steps][5] as per the example provided in this project's [circle.yml][4]
 
 ---
 > Github: [@telus](https://github.com/telus) &bull; 
