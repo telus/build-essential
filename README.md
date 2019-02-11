@@ -29,7 +29,7 @@ For developers working across multipl projects, having to install the same depen
 
 ### Packages
 
-- Configration:
+- Configuration:
   - `@telus/eslint-config` - Shared [ESLint][] Config
   - `@telus/remark-config` - Shared [Remark][] Config
   - `@telus/semantic-release-config` - Shared [Semantic Release][] Config
