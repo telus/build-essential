@@ -31,7 +31,7 @@
     "setup-local": "npx install-group peer --package @telus/build-essential --no-save"
   },
   "peerDependencies": {
-    "@telus/eslint-config": "^1.3.6",
+    "@telus/eslint-config": "^2.0.0",
     "@telus/remark-config": "^1.1.0",
     "@telus/semantic-release-config": "^1.1.2",
     "editorconfig-checker": "^1.3.3",
