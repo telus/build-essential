@@ -1,3 +1,7 @@
+Hey, I see you're new here. Please view [issue 300 from Tech Forum](https://github.com/telus/technology-forum/issues/300) to see why we are moving away from `build-essential`.
+
+---
+
 # Build Essential
 
 [![version][npm-image]][npm-url] [![Build Status][circle-image]][circle-url] [![Docker Build Status][docker-image]][docker-url] 
